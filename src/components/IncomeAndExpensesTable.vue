@@ -79,35 +79,16 @@ export default {
     },
     methods:{
         calculateTotalIncome(){
-            // let total=0
-            //    for (let index = 0; index < money.length; index++) {
-            //         total+= Number(money[index].account.income)
-            //     }
-            // this.totalIncome=total
             IncomeAndExpensesStore.dispatch("calculateTotalIncome")
             return IncomeAndExpensesStore.getters.totalIncome
             
         },
         calculateTotalExpenses(){
         
-            // let total=0
-            //    for (let index = 0; index < money.length; index++) {
-            //         total+= Number(money[index].account.expenses)
-            //     }
-            // this.totalExpenses=total
             IncomeAndExpensesStore.dispatch("calculateTotalExpenses")
             return IncomeAndExpensesStore.getters.totalExpenses
         },
         calculateTotal(){
-            //  let total_=0
-            //  console.log("tt")
-            //  console.log(money)
-            //    for (let index = 0; index < money.length; index++) {
-            //         total_+= Number(money[index].account.income)
-            //         total_-= Number(money[index].account.expenses)
-            //     }
-            // this.total=total_
-            // console.log(this.total)
             IncomeAndExpensesStore.dispatch("calculateTotal")
             console.log("this",this)
             return IncomeAndExpensesStore.getters.total
@@ -119,7 +100,14 @@ export default {
         },
         openForm(index,money){
             this.editIndex=index
-            this.form.account=money.account
+            this.form={
+                account:{
+                    day: money.account.day,
+                    income:money.account.income,
+                    expenses: money.account.expenses,
+                    particular: money.account.particular
+                }
+            }
             let cloned = res
             this.form.account=cloned.account
         },

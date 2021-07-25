@@ -3,7 +3,7 @@
     {   
     "account":{
         "day":"2021-07-20",
-        "income":"200",
+        "income":"100",
         "expenses":"0",
         "particular": "แม่ให้เงิน"
 
@@ -14,8 +14,8 @@
     "account":{
       "day":"2021-07-20",
       "income":"0",
-      "expenses":"70",
-      "particular": "ซื้อขนม"
+      "expenses":"50",
+      "particular": "ซื้อไทยากิ"
 
         }
     },
@@ -23,7 +23,7 @@
     
         "account":{
           "day":"2021-07-21",
-          "income":"100",
+          "income":"300",
           "expenses":"0",
           "particular": "แม่ให้เงิน"
     
@@ -35,7 +35,7 @@
           "day":"2021-07-21",
           "income":"0",
           "expenses":"30",
-          "particular": "ซื้อข้าว"
+          "particular": "ซื้อข้าวผัดกระเพราหมูสับไข่ดาว"
     
             }
     },
@@ -44,9 +44,48 @@
         "account":{
           "day":"2021-07-21",
           "income":"0",
-          "expenses":"20",
-          "particular": "ซื้อขนม"
+          "expenses":"200",
+          "particular": "ซื้อหอยจ๊อปู"
     
             }
+    },
+    {
+    
+      "account":{
+        "day":"2021-07-22",
+        "income":"200",
+        "expenses":"0",
+        "particular": "แม่ให้เงิน"
+  
+          }
+    },
+    {
+    
+      "account":{
+        "day":"2021-07-22",
+        "income":"0",
+        "expenses":"30",
+        "particular": "ซื้อชานมไข่มุก"
+  
+          }
+    },
+    {
+      "account":{
+        "day":"2021-07-23",
+        "income":"900",
+        "expenses":"0",
+        "particular": "ได้รับเงินจากการพิมพ์งาน"
+  
+        }
+
+    },
+    {
+      "account":{
+        "day":"2021-07-23",
+        "income":"0",
+        "expenses":"148",
+        "particular": "ซื้ออุปกรณ์การเรียน"
+  
+          }
     }
 ]}

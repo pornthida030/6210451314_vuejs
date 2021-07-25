@@ -68,14 +68,6 @@ export default {
                 account: this.form.account,
             }
             IncomeAndExpensesStore.dispatch('addIncomeAndExpenses',payload)
-            // IncomeAndExpensesStore.dispatch("fetchIncomeAndExpenses")
-            // this.money= IncomeAndExpensesStore.getters.money
-            // this.total=IncomeAndExpensesTable.total
-            
-            // IncomeAndExpensesStore.dispatch("calculateTotalIncome")
-            // IncomeAndExpensesStore.dispatch("calculateTotal")
-            // IncomeAndExpensesTable.methods.calculateTotal()
-            // console.log(IncomeAndExpensesTable.data())
             this.clearForm()
         }
     }

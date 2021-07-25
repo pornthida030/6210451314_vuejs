@@ -61,46 +61,6 @@ export default new Vuex.Store({
     },
     fetchIncomeAndExpenses({commit}){
       let res = require('@/json/IncomeAndExpensesInfo')
-      // {
-      //   data:[
-      //     {
-      //         name:{
-      //             day:'2021-07-20',
-      //             income:'200',
-      //             expenses: '0',
-      //             particular: 'แม่ให้เงิน'
-
-      //         }
-      //     },
-      //     {
-      //       name:{
-      //           day:'2021-07-20',
-      //           income: '0',
-      //           expenses: '70',
-      //           particular: 'ซื้อขนม'
-
-      //       }
-      //     },
-      //     {
-      //       name:{
-      //           day:'2021-07-20',
-      //           income: '0',
-      //           expenses: '70',
-      //           particular: 'ซื้อขนม'
-
-      //       }
-      //     },
-      //     {
-      //       name:{
-      //           day:'2021-07-20',
-      //           income: '0',
-      //           expenses: '70',
-      //           particular: 'ซื้อขนม'
-
-      //       }
-      //     },
-      //      ]
-      // }
       commit("fetch",{res})
     },
     addIncomeAndExpenses({commit},payload){
