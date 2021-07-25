@@ -1,0 +1,52 @@
+
+{"data":[ 
+    {   
+    "account":{
+        "day":"2021-07-20",
+        "income":"200",
+        "expenses":"0",
+        "particular": "แม่ให้เงิน"
+
+        }
+    },
+    {
+    
+    "account":{
+      "day":"2021-07-20",
+      "income":"0",
+      "expenses":"70",
+      "particular": "ซื้อขนม"
+
+        }
+    },
+    {
+    
+        "account":{
+          "day":"2021-07-21",
+          "income":"100",
+          "expenses":"0",
+          "particular": "แม่ให้เงิน"
+    
+            }
+    },
+    {
+    
+        "account":{
+          "day":"2021-07-21",
+          "income":"0",
+          "expenses":"30",
+          "particular": "ซื้อข้าว"
+    
+            }
+    },
+    {
+    
+        "account":{
+          "day":"2021-07-21",
+          "income":"0",
+          "expenses":"20",
+          "particular": "ซื้อขนม"
+    
+            }
+    }
+]}
