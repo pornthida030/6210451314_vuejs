@@ -67,7 +67,6 @@ export default new Vuex.Store({
     },
     fetchIncomeAndExpenses({commit}){
       let res = require('@/json/IncomeAndExpensesInfo')
-      console.log(res)
       const sortDate = (data) => {
         const sorter = (a,b) => {
             return new Date(a.account.day).getTime() - new Date(b.account.day).getTime()
