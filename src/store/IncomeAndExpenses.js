@@ -33,14 +33,12 @@ export default new Vuex.Store({
                 total+= Number(state.data[index].account.income)
           }
           state.totalIncome=total
-          console.log(state.totalIncome)
         }
         else if(number==1){
           for (let index = 0; index < state.data.length; index++) {
             total+= Number(state.data[index].account.expenses)
           }
           state.totalExpenses=total
-          console.log(state.totalExpenses)
         }
         else if(number==2){
           for (let index = 0; index < state.data.length; index++) {
@@ -48,9 +46,17 @@ export default new Vuex.Store({
             total-= Number(state.data[index].account.expenses)
           }
           state.total=total
-          console.log(state.total)
         }
         
+      },
+      sort(state){
+        const sortDate = (data) => {
+          const sorter = (a,b) => {
+              return new Date(a.account.day).getTime() - new Date(b.account.day).getTime()
+          }
+          data.sort(sorter);
+      }
+      sortDate(state.data);
       }
 
 },
@@ -61,6 +67,14 @@ export default new Vuex.Store({
     },
     fetchIncomeAndExpenses({commit}){
       let res = require('@/json/IncomeAndExpensesInfo')
+      console.log(res)
+      const sortDate = (data) => {
+        const sorter = (a,b) => {
+            return new Date(a.account.day).getTime() - new Date(b.account.day).getTime()
+        }
+        data.sort(sorter);
+    }
+    sortDate(res.data);
       commit("fetch",{res})
     },
     addIncomeAndExpenses({commit},payload){
@@ -74,6 +88,9 @@ export default new Vuex.Store({
     },
     calculateTotal({commit}){
       commit("calculateTotal",2)
+    },
+    sortDay({commit}){
+      commit("sort")
     }
 
   },

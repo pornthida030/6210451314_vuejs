@@ -20,15 +20,15 @@
                   </td>
                   <td v-if="index!=editIndex">{{money.account.particular}}</td> 
                   <td v-if="index==editIndex">
-                      <input class="particular" type="text" v-model="form.account.particular">
+                      <input class="particularEdit" type="text" v-model="form.account.particular">
                   </td>
                   <td v-if="index!=editIndex">{{money.account.income}}</td> 
                   <td v-if="index==editIndex">
-                      <input class="income" type="text" v-model="form.account.income">
+                      <input class="incomeEdit" type="text" v-model="form.account.income">
                   </td>
                   <td v-if="index!=editIndex">{{money.account.expenses}}</td>
                   <td v-if="index==editIndex">
-                      <input class="expenses" type="text" v-model="form.account.expenses">
+                      <input class="expensesEdit" type="text" v-model="form.account.expenses">
                   </td>
 
                 <td v-if="index!=editIndex">
@@ -90,13 +90,14 @@ export default {
         },
         calculateTotal(){
             IncomeAndExpensesStore.dispatch("calculateTotal")
-            console.log("this",this)
             return IncomeAndExpensesStore.getters.total
         },
         fetchIncomeAndExpenses(){
+            IncomeAndExpensesStore.dispatch("sortDay")
             IncomeAndExpensesStore.dispatch("fetchIncomeAndExpenses")
             this.money= IncomeAndExpensesStore.getters.money
-            console.log("t"+this.money)
+            
+            
         },
         openForm(index,money){
             this.editIndex=index
@@ -129,8 +130,8 @@ export default {
                 index: this.editIndex,
                 account: this.form.account,
             }
-            console.log(payload)
             IncomeAndExpensesStore.dispatch("editIncomeAndExpenses",payload)
+            IncomeAndExpensesStore.dispatch("sortDay")
             this.calculateTotalIncome()
             this.calculateTotalExpenses()
             this.calculateTotal()
@@ -150,18 +151,18 @@ export default {
         text-align: center;
         color: white;
        
-        
     }
     table{
         border-collapse: collapse;
         width: 100%;
-        margin: 5px;
+        margin: 1px;
         
     }
 
     td{
         padding: 15px;
         background: rgb(250, 144, 144);
+       
         
         
     }
@@ -169,6 +170,7 @@ export default {
         padding: 15px;
         background: rgb(255, 68, 68);
         font-weight: bolder;
+        margin: 1px;
     }
     .open{
         padding: 5px 50px 5px 50px;
@@ -208,6 +210,9 @@ export default {
     .id{
         background: rgb(255, 98, 98);
     }
-    
+    .dayEdit,.particularEdit,.incomeEdit,.expensesEdit{
+        padding: 6px;
+    }
+   
 
 </style>

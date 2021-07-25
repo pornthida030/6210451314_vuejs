@@ -40,8 +40,6 @@ import IncomeAndExpensesStore from '@/store/IncomeAndExpenses'
 export default {
     data(){
         return{
-            // money:[],
-            // total:0,
             form:{
                 account:{
                     day: '',
@@ -68,6 +66,7 @@ export default {
                 account: this.form.account,
             }
             IncomeAndExpensesStore.dispatch('addIncomeAndExpenses',payload)
+            IncomeAndExpensesStore.dispatch('sortDay')
             this.clearForm()
         }
     }
@@ -90,7 +89,7 @@ export default {
         padding: 5px 60px 5px 60px;
         transition-duration: 0.4s;
         background-color: white;
-         margin: 10px;
+        margin: 10px;
     }
     .add:hover{
         background-color: rgb(221, 66, 66);

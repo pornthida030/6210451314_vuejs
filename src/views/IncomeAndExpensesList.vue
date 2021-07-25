@@ -1,8 +1,8 @@
 <template>
     <div>
-        <h2>เพิ่มข้อมูล</h2>
+        <p>เพิ่มข้อมูล</p>
         <income-and-expenses-form></income-and-expenses-form>
-        <h2>ตารางบันทึกรายรับ-รายจ่าย</h2>
+        <p>ตารางบันทึกรายรับ-รายจ่าย</p>
         
         <income-and-expenses-table></income-and-expenses-table>
     </div> 
@@ -23,8 +23,10 @@ export default {
     body{
         background-color: rgb(255, 189, 189);
     }
-    h4{
+    p{
         text-align: center;
+        font-size: 24px;
+        font-weight: bolder;
         
     }
 
