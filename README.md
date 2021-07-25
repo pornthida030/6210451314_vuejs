@@ -1,4 +1,8 @@
 # 6210451314_vuejs
+```
+Name:Pornthida Suksankawanich
+ID:6210451314
+```
 
 ## Project setup
 ```
